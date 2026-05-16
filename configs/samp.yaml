@@ -1,0 +1,30 @@
+defaults:
+  - _self_
+  - dataset: oxfordpet
+  - override hydra/job_logging: disabled
+  - override hydra/hydra_logging: disabled
+
+explainer_name: samp
+save_dir: null
+seed: 0
+device: cuda
+
+model_name: resnet18
+
+exp_obj: prob
+step_size: 5
+n_frag: 5
+klen: 11
+ksig: 5
+momentum: null
+direction: both
+reduction: sum
+insertion_baseline: blur
+
+max_eval_samples: 500
+num_vis_samples: 3
+
+hydra:
+  run:
+    dir: .         
+  output_subdir: null   

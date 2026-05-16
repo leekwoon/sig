@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+  - dataset: oxfordpet
+  - override hydra/job_logging: disabled
+  - override hydra/hydra_logging: disabled
+
+explainer_name: big
+save_dir: null
+seed: 0
+device: cuda
+
+# classifier
+model_name: resnet18
+
+# explainer
+num_steps: 200
+exp_obj: prob 
+
+# BIG specific parameters
+max_sigma: 35   # Maximum blur kernel size
+sqrt: false     # Use sqrt spacing for sigma
+
+# evaluation
+max_eval_samples: 500  # Maximum number of samples to evaluate (null for all)
+num_vis_samples: 10    # Number of samples to visualize
+
+# hydra
+hydra:
+  run:
+    dir: .
+  output_subdir: null

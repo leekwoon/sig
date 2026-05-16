@@ -1,0 +1,31 @@
+defaults:
+  - _self_
+  - dataset: oxfordpet
+  - override hydra/job_logging: disabled
+  - override hydra/hydra_logging: disabled
+
+explainer_name: spectral_ig
+save_dir: null
+seed: 0
+device: cuda
+
+model_name: resnet18
+
+num_steps: 200
+baseline_method: zero
+exp_obj: prob
+overlap: 0.4
+spectral_mode: svd
+channel_mode: per_channel
+gating_schedule: linear
+gating_sigmoid_k: 12.0
+wavelet_levels: 4
+laplacian_levels: 4
+
+max_eval_samples: 500
+num_vis_samples: 10
+
+hydra:
+  run:
+    dir: .         
+  output_subdir: null   
