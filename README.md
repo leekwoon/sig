@@ -1,5 +1,9 @@
 # Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution
 
+<p align="center">
+    <img src="assets/teaser.png" width="90%">
+</p>
+
 This repository provides the source code for our paper **"Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution,"** accepted to **ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2026**.
 
 SIG (Spectral Integrated Gradients) is a feature attribution method that constructs the integration path in the frequency domain, traversing from coarse (low-frequency) to fine (high-frequency) image components. This coarse-to-fine path yields sharper and more faithful attributions than path-integral baselines that interpolate directly in pixel space.
@@ -17,11 +21,12 @@ The provided `requirements.txt` pins `torch==2.7.0` (CUDA 12.8 wheel) and `torch
 
 ## Datasets
 
-We evaluate on three image classification datasets:
+We evaluate on three image classification datasets (and CIFAR-10 for ROAR):
 
 - **ImageNet (ILSVRC2012)** — standard validation split.
 - **Oxford-IIIT Pet** — 37 fine-grained breeds.
 - **Oxford Flowers 102** — 102 flower species.
+- **CIFAR-10** — used for the ROAR benchmark.
 
 Datasets are *not* shipped with this repository. Edit the `dataset_path` field in the corresponding YAML under `configs/dataset/` before running any script:
 
@@ -64,7 +69,7 @@ Each attribution method has a runner script under `scripts/benchmark_diffid/`:
 
 ```bash
 # Our method (SIG)
-bash scripts/benchmark_diffid/spectral_ig.sh
+bash scripts/benchmark_diffid/spectral_ig.sh <overlap>
 
 # Baseline methods
 bash scripts/benchmark_diffid/ig.sh
@@ -87,12 +92,26 @@ Results are written to `results/benchmark_diffid/<dataset>/<method>/<model>/`.
 
 ## ROAR Benchmark
 
-ROAR-style benchmarks (CIFAR) are provided under `scripts/benchmark_roar/`:
+ROAR-style benchmarks (CIFAR-10) are provided under `scripts/benchmark_roar/`:
 
 ```bash
+# Our method (SIG)
 bash scripts/benchmark_roar/spectral_ig.sh
-# ...same set of baselines as above
+
+# Baseline methods
+bash scripts/benchmark_roar/ig.sh
+bash scripts/benchmark_roar/big.sh
+bash scripts/benchmark_roar/ig2.sh
+bash scripts/benchmark_roar/gig.sh
+bash scripts/benchmark_roar/agi.sh
+bash scripts/benchmark_roar/eig.sh
+bash scripts/benchmark_roar/mig.sh
+bash scripts/benchmark_roar/samp.sh
+bash scripts/benchmark_roar/grad_input.sh
+bash scripts/benchmark_roar/random.sh
 ```
+
+Results are written to `results/benchmark_roar/<dataset>/<method>/`.
 
 ## Citation
 
@@ -110,7 +129,3 @@ If you use this codebase, please consider citing:
 ## License
 
 This project is released under the [MIT License](LICENSE).
-
-## Acknowledgements
-
-This codebase builds on [PAIR-code/saliency](https://github.com/PAIR-code/saliency).

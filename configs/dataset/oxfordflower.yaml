@@ -1,7 +1,8 @@
 dataset_name: oxfordflower
-dataset_path: /home/soyeon/dataset/oxfordflower
+# Set this to the directory containing Oxford 102 Flowers data.
+dataset_path: /path/to/oxfordflower
 test_split: 0.05
-image_size: 256 
+image_size: 256
 batch_size: 1
 num_workers: 4
 mean: [0.485, 0.456, 0.406]

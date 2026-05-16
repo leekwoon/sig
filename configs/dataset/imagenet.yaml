@@ -1,5 +1,6 @@
 dataset_name: imagenet
-dataset_path: /home/soyeon/dataset/imagenet2012
+# Set this to the root directory of your local ImageNet (ILSVRC2012) installation.
+dataset_path: /path/to/imagenet2012
 test_split: 0.05
 image_size: 256
 batch_size: 1
