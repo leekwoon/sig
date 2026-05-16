@@ -23,7 +23,7 @@ max_iterations: 2    # Max iterations for geodesic path
 epsilon: 1000         # Convergence threshold
 
 # VAE settings
-vae_type: mar  # sd1, sd2, mar, kd
+vae_type: sd2  # sd1, sd2, mar, kd  (mar requires kl16.ckpt under cleanig/mar_vae/)
 
 # evaluation
 max_eval_samples: 500  # Maximum number of samples to evaluate (null for all)
