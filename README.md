@@ -1,7 +1,7 @@
 # Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution
 
 <p align="center">
-    <img src="assets/teaser.png" width="90%">
+    <img src="assets/main.png" width="90%">
 </p>
 
 This repository provides the source code for our paper **"Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution,"** accepted to **ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2026**.
