@@ -123,6 +123,7 @@ If you use this codebase, please consider citing:
   author={Kim, Soyeon and Lim, Seongwoo and Lee, Kyowoon and Choi, Jaesik},
   booktitle={Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)},
   year={2026}
+  url={http://arxiv.org/abs/2605.19607}
 }
 ```
 
