@@ -1,20 +1,17 @@
 # Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution
 
 <p align="center">
+    <a href="https://arxiv.org/abs/2605.19607">Paper</a> &nbsp;|&nbsp;
+    <a href="assets/kdd2026_poster.pdf">Poster</a>
+</p>
+
+<p align="center">
     <img src="assets/main.png" width="90%">
 </p>
 
 This repository provides the source code for our paper **"[Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution](https://arxiv.org/abs/2605.19607),"** accepted to **ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD) 2026**.
 
 SIG (Spectral Integrated Gradients) is a feature attribution method that constructs the integration path in the frequency domain, traversing from coarse (low-frequency) to fine (high-frequency) image components. This coarse-to-fine path yields sharper and more faithful attributions than path-integral baselines that interpolate directly in pixel space.
-
-## Poster
-
-Our KDD 2026 poster is available as a [PDF](assets/kdd2026_poster.pdf).
-
-<p align="center">
-    <img src="assets/kdd2026_poster.png" width="90%">
-</p>
 
 ## Installation
 
