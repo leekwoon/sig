@@ -8,6 +8,14 @@ This repository provides the source code for our paper **"[Spectral Integrated G
 
 SIG (Spectral Integrated Gradients) is a feature attribution method that constructs the integration path in the frequency domain, traversing from coarse (low-frequency) to fine (high-frequency) image components. This coarse-to-fine path yields sharper and more faithful attributions than path-integral baselines that interpolate directly in pixel space.
 
+## Poster
+
+Our KDD 2026 poster is available as a [PDF](assets/kdd2026_poster.pdf).
+
+<p align="center">
+    <img src="assets/kdd2026_poster.png" width="90%">
+</p>
+
 ## Installation
 
 ```bash
