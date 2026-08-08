@@ -1,8 +1,8 @@
 # Spectral Integrated Gradients for Coarse-to-Fine Feature Attribution
 
 <p align="center">
-    <a href="https://arxiv.org/abs/2605.19607">Paper</a> &nbsp;|&nbsp;
-    <a href="assets/kdd2026_poster.pdf">Poster</a>
+    <a href="https://arxiv.org/abs/2605.19607">[Paper]</a> &nbsp;
+    <a href="assets/kdd2026_poster.pdf">[Poster]</a>
 </p>
 
 <p align="center">
